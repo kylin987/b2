@@ -1,0 +1,75 @@
+<!--#include file="resources.html"-->
+<body>
+<!--#include file="nav.html"-->
+<div class="c"></div>	
+<div id="bd">
+<div id="ban-in" style="background-image:url(/public/th/images/14415956337556.jpg)">
+    <div class="ban-bg"></div>
+</div>
+<div class="wp">
+<div class="tit-i">
+    <h3>{$info.name}</h3>
+    <h5><span>Projects</span></h5>
+	<em></em>
+</div>
+
+<div class="c"></div>
+<ul class="ul-case">
+    <!--foreach:{$loop $vo}-->
+    <li>
+        <div class="block">
+            <div class="pic"><img src="{$vo.image}" alt="{$vo.titlex}"></div>
+            <div class="txt">
+                <a href="{$vo.aurl}" target="_blank" style="width:100%;height:100%;display:block;">
+                    <b></b>
+                    <div class="pad">                      
+                        <h3>{$vo.titlex}</h3>
+                        <span class="more">案例详情</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+	<!--/loop-->
+</ul>
+<div class="c"></div>
+<div class="m-page">
+    {$page}
+</div>
+</div>
+</div>
+<div class="c"></div>
+<!--#include file="foot.html"-->
+<!--#include file="sid.html"-->
+<script type="text/javascript" src="/public/th/js/jquery.js"></script>
+<script type="text/javascript" src="/public/th/js/lib.js"></script>
+<script>
+    var isMobile;
+    function mobileCheck(){
+        isMobile  = $('#m-hd').is(':visible');
+    }
+
+    $(window).resize(function(event) {
+        mobileCheck();
+        $('.ul-case li').removeClass('on');
+        if(isMobile){
+            $('.ul-case').attr('id','ul-mobile');
+        }else{
+            $('.ul-case').attr('id','ul-pc');
+        }
+    });
+
+    $('body').on('mouseenter mouseleave', '#ul-pc li', function(){
+        $(this).toggleClass('on');
+    })
+
+    $('body').on('click', '#ul-mobile li', function(){
+        $(this).toggleClass('on');
+    })
+
+    $(window).load(function(){
+        $(window).trigger('resize');
+    })
+</script>
+</body>
+</html>

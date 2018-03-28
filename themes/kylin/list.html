@@ -1,0 +1,46 @@
+<!--#include file="resources.html"-->
+<body>
+<!--#include file="nav.html"-->
+<div class="c"></div>	
+<div id="bd">
+<div id="ban-in" style="background-image:url(/public/th/images/14415956107965.jpg)">
+    <div class="ban-bg"></div>
+</div>
+<div class="wp">
+<div class="tit-i">
+    <h3>{$info.name}</h3>
+    <h5><span>NEWS</span></h5>
+</div>
+<ul class="ul-list">
+	<!--foreach:{$loop $vo}-->
+    <li>
+        <div class="pad">
+            <div class="pic"><a href="{$vo.aurl}" target="_blank"><img src="{$vo.image}" alt="{$vo.titlex}"></a></div>
+            <div class="bor">
+                <div class="txt">
+                    <div class="title">
+                        <span><em>{$vo.updatetime time="d/m"}</em>{$vo.updatetime time="Y"}</span>
+                        <h3><a href="{$vo.aurl}" target="_blank">{$vo.titlex}</a></h3>
+                    </div>
+                    <a href="{$vo.aurl}"><p>{$vo.description len="50"}</p></a>
+                </div>
+                <div class="more"><a href="{$vo.aurl}"  target="_blank" class="r">查看更多 ></a></div>
+            </div>
+        </div>
+    </li>
+	<!--/loop-->
+</ul>
+<div class="c"></div>
+<div class="m-page">
+    {$page}
+</div>
+</div>
+</div>
+<div class="c"></div>
+<!--#include file="foot.html"-->
+<!--#include file="sid.html"-->
+<script type="text/javascript" src="/public/th/js/jquery.js"></script>
+<script type="text/javascript" src="/public/th/js/lib.js"></script>
+
+</body>
+</html>

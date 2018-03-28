@@ -1,0 +1,49 @@
+<div id="hd">
+    <div class="wp">
+        <div class="logo"><a href="index1"><img src="/public/th/images/logo.png" alt=""></a></div>
+        <div id="nav">
+            <ul>
+				<!--判断主导航高亮--> 
+				<!--if:{$top_category['cid']==''}-->
+				<li class="current"> 
+				<!--{else}-->
+				<li> 
+				<!--{/if}-->
+                <a href="/">首页</a></li>
+                <!--list:{table="category" type="top" order="cid asc" limit="7"}-->
+				<!--判断循环内导航高亮-->
+				<!--if:{$top_category['cid']==$list['cid']}-->
+                <li class="current"> 
+				<!--{else}-->
+				<li> 
+				<!--{/if}-->
+				<a href="{$list.curl}" >{$list.name}</a></li>
+				<!--/list-->
+            </ul>
+        </div>
+        
+    </div>
+</div>
+<div class="c"></div>
+<div id="m-hd">
+    <a href="index1" class="m-logo"><img src="/public/th/images/logo.png" alt=""></a>
+    <div class="m-trigger"></div>
+    <ul class="m-nav">
+        <!--判断主导航高亮--> 
+		<!--if:{$top_category['cid']==''}-->
+		<li class="current"> 
+		<!--{else}-->
+		<li> 
+		<!--{/if}-->
+		<a href="/" class="v1">首页</a></li>
+		<!--list:{table="category" type="top" order="cid asc" limit="7"}-->
+		<!--判断循环内导航高亮-->
+		<!--if:{$top_category['cid']==$list['cid']}-->
+		<li class="current"> 
+		<!--{else}-->
+		<li> 
+		<!--{/if}-->
+		<a href="{$list.curl}" class="v1">{$list.name}</a></li>
+		<!--/list-->
+    </ul>
+</div>

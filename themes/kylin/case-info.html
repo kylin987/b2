@@ -1,0 +1,41 @@
+<!--#include file="resources.html"-->
+<body>
+<!--#include file="nav.html"-->
+<div class="c"></div>	
+<div id="bd">
+    <div class="cur">
+        <div class="wp">您的当前位置：<a href="__APP__/">首页</a><!--foreach:{$nav $list}--> > <a href="{$list.curl}" >{$list.name}</a><!--/list--> > {$info.title}</div>
+    </div>
+    <div class="case-article">
+        <div class="case-article-bg">
+            <div class="wp pr">
+				<!--if:{empty($prev)}--> 
+				<!--{else}--> 
+				<a href="{$prev.aurl}" class="article-prev"></a> 
+				<!--/if--> 
+                <!--if:{empty($next)}--> 
+				<!--{else}--> 
+				<a href="{$next.aurl}" class="article-next"></a>
+				<!--/if-->                
+                <h1>{$info.title}</h1>
+                <p class="tc"><span>{$info.description}</span></p>
+                <div class="btn"><a href="/go.php?{$info.copyfrom}" target="_blank">访问网址</a><a href="http://wpa.qq.com/msgrd?v=3&uin={$my.kefuqq}&site=qq&menu=yes" target="_blank">了解报价</a></div>
+
+                <div class="computer-bg"><img src="{$info.bigimg}" alt="{$info.title}"></div>
+            </div>
+        </div>
+
+        <div class="case-img2">
+            {$info.content}		
+		</div>
+        <div class="case-back"><a href="/case/">返回案例列表</a></div>
+    </div>
+</div>
+<!-- end #bd -->
+<div class="c"></div>
+<!--#include file="foot.html"-->
+<!--#include file="sid.html"-->
+<script type="text/javascript" src="/public/th/js/jquery.js"></script>
+<script type="text/javascript" src="/public/th/js/lib.js"></script>
+</body>
+</html>

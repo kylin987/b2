@@ -1,0 +1,168 @@
+<!--#include file="resources.html"-->
+<link rel="stylesheet" type="text/css" href="/public/th/css/owl.carousel.css" />
+<body>
+<!--#include file="nav.html"-->
+<div class="c"></div>	
+<div id="bd">
+<!--#include file="banner.html"-->
+<div class="row1 fix">
+    <div class="wp">
+        <div class="tit-i">
+            <h3>言致服务</h3>
+            <h5><span>SERVICE</span></h5>
+        </div>
+        <ul class="ul-icon-i">
+            <li class="li1">
+                <div class="pad">
+                    <a href="#">
+                        <span></span>
+                        <h3>高端网站建设</h3>
+                        <em></em>
+                        <p>根据用户的需求、市场状况、企业情况提供专业化的网站策划、交互设计、技术和营销解决方案。</p>
+                        <div class="pic">
+                            <img src="/public/th/images/m1.png" alt="">
+                            <img src="/public/th/images/m2.png" alt="" class="pic-icon">
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li2">
+                <div class="pad">
+                    <a href="#">
+                        <span></span>
+                        <h3>手机网站建设</h3>
+                        <em></em>
+                        <p>在移动互联时代，我们得出“简单使用，精彩体验”的移动应用开发理念，创造属于无线时代的精彩互联。</p>
+                        <div class="pic">
+                            <img src="/public/th/images/m3.png" alt="">
+                            <img src="/public/th/images/m4.png" alt="" class="pic-icon">
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li3">
+                <div class="pad">
+                    <a href="#">
+                        <span></span>
+                        <h3>微信应用开发</h3>
+                        <em></em>
+                        <p>为客户提供全方位的移动端营销服务，微信公众平台开发，微站设计。</p>
+                        <div class="pic">
+                            <img src="/public/th/images/m5.png" alt="">
+                            <img src="/public/th/images/m6.png" alt="" class="pic-icon">
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="li4">
+                <div class="pad">
+                    <a href="#">
+                        <span></span>
+                        <h3>网站营销推广</h3>
+                        <em></em>
+                        <p>建站只是一切网络营销的前提，让网站为您带来源源不断的订单才是我们目的。</p>
+                        <div class="pic">
+                            <img src="/public/th/images/m7.png" alt="">
+                            <img src="/public/th/images/m8.png" alt="" class="pic-icon">
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row2 fix">
+    <div class="wp">
+        <div class="tit-i">
+            <h3>言致案例</h3>
+            <h5><span>case</span></h5>
+        </div>
+        <div class="case-i">
+
+            <div class="case-i-r" style="width: 100%;">
+                <ul class="ul-case-i">
+                    <!--list:{table="content" image="true" cid="3" order="updatetime desc" limit="8"}-->
+                    <li>
+                        <a href="{$list.aurl}" target="_blank">
+                            <div class="pic"><img src="{$list.image}"></div>
+                            <div class="hover">
+                                <b></b>
+                                <div class="txt">                                    
+                                    <h3>{$list.title}</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!--/list-->
+                </ul>
+            </div>
+            <div class="c"></div>
+            <div class="more-i"><a href="/case/"></a></div>
+        </div>
+    </div>
+</div>
+<div class="row3 news-bg">
+    <div class="wp">
+        <div class="tit-i tit-i-1">
+            <h3>新闻动态</h3>
+            <h5><span>news</span></h5>
+        </div>
+        <ul class="ul-news-i">
+            <!--list:{table="content" image="true" cid="4" order="updatetime desc" limit="4"}-->
+            <li>
+                <div class="pad">
+                    <div class="txt">
+                        <span><em>{$list.updatetime time="m/d"}</em>{$list.updatetime time="Y"}</span>
+                        <h3><a href="{$list.aurl}" target="_blank">{$list.title}</a></h3>
+                        <p>{$list.description len="46"}</p>
+                        <a href="{$list.aurl}" target="_blank" class="more"></a>
+                    </div>
+                    <div class="hover">
+                        <div class="img" style="background: url({$list.image}) 0 0 /100% 100% no-repeat;background: url({$list.image}) 0 0 no-repeat\9;"></div>
+                        <div class="pad">
+                            <h3><a href="{$list.aurl}" target="_blank">{$list.title}</a></h3>
+                            <p>{$list.description len="46"}</p>
+                        </div>
+                    </div>
+                </div>
+            </li>            
+			<!--/list-->
+        </ul>
+        <div class="c"></div>
+        <div class="news-more"><a href="/news/">load more</a></div>
+    </div>
+</div>
+<div class="row4 fix">
+    <div class="wp">
+        <div class="tit-i">
+            <h3>联系我们</h3>
+            <h5><span>contact</span> webthink</h5>
+        </div>
+        <div class="contact-l">
+            <ul class="ul-contact">
+                <li class="li1">{$my.address}</li>
+                <li class="li2"><a href="tel:15617514855">156 1751 4855 (咨询)</a><br /><a href="tel:15890054823">158 9005 4823 (售后)</a></li>
+            </ul>
+        </div>
+        <div class="contact-r">
+
+            <form action="" class="contact-form" method="post">
+                <div class="">
+                    <input type="text" class="inp l" name="name" id="name" placeholder="您的姓名" >
+                    <input type="text" class="inp r" name="tel" id="tel" placeholder="您的联系方式">
+                </div>
+                <textarea cols="30" rows="10" name="content" id="content"></textarea>
+				<input name="time" type="hidden" id="time" value="<?php echo date('Y-m-d H:i:s') ?>">
+				<input name="form" id="form" type="hidden" value="yixiang">
+                <input type="submit" value="提交您的需求" class="sub" id="sub">
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<div class="c"></div>
+<!--#include file="foot.html"-->
+<!--#include file="sid.html"-->
+<!--#include file="ind_script.html"-->
+</body>
+</html>
